@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathan Tran - Portfolio</title>
+    
+    <meta property="og:title" content="Nathan Tran - Portfolio">
+    <meta property="og:description" content="Computer Science @ SJSU | SWE Fellow @ Uber | SWE Intern @ Ego (YC W24)">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://n8thantran.github.io">
+    <meta property="og:theme-color" content="#0077B5">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="theme-toggle">
+        <input type="checkbox" id="theme-switch">
+        <label for="theme-switch" class="toggle-label">
+            <span class="sun"><i class="fas fa-sun"></i></span>
+            <span class="moon"><i class="fas fa-moon"></i></span>
+        </label>
+    </div>
+
+    <canvas id="background"></canvas>
+    
+    <div id="resume-modal" class="modal">
+        <div class="modal-header">
+            <span class="modal-title">Resume</span>
+            <div class="modal-controls">
+                <a href="resume.pdf" download class="download-button" title="Download Resume">
+                    <i class="fas fa-download"></i>
+                </a>
+                <span class="close-button">&times;</span>
+            </div>
+        </div>
+        <div class="modal-content">
+            <object id="resume-iframe" data="resume.pdf" type="application/pdf">
+                <p>Unable to display PDF file. <a href="resume.pdf" download>Download</a> instead.</p>
+            </object>
+        </div>
+    </div>
+
+    <main class="content">
+        <section class="intro-section">
+            <h1>Nathan Tran</h1>
+            <p class="subtitle">Computer Science @ <a href="parking" style="text-decoration: none; color: inherit; cursor: pointer;">SJSU</a></p>
+            
+            <div class="social-links">
+                <a href="https://linkedin.com/in/nthntrn" target="_blank" rel="noopener noreferrer" class="button linkedin" data-tooltip="Connect on LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="button resume" data-tooltip="View Resume" id="resume-button">
+                    <i class="fas fa-file-alt"></i>
+                </a>
+                <a href="https://github.com/n8thantran" target="_blank" rel="noopener noreferrer" class="button github" data-tooltip="View GitHub Projects">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </section>
+
+        <section class="experience">
+            <h2>Work Experience</h2>
+            
+            <div class="timeline-item">
+                <a href="https://www.uber.com/us/en/careers/careerprep/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: flex; gap: 2rem; width: 100%;">
+                    <div class="company-logo">
+                        <img src="https://static-00.iconduck.com/assets.00/uber-icon-2048x2048-1c9pt96a.png" alt="Uber">
+                    </div>
+                    <div class="timeline-content">
+                        <div class="header">
+                            <h3 class="company">Uber Career Prep <span class="arrow">›</span></h3>
+                            <span class="date">Dec. 2024 - Present</span>
+                        </div>
+                        <p class="position">Software Engineering Fellow</p>
+                        <ul class="responsibilities">
+                            <li>Selected for Uber's competitive career preparation program focused on technical interview preparation, data structures & algorithms, and software engineering best practices</li>
+                        </ul>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <a href="https://ego.live" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: flex; gap: 2rem; width: 100%;">
+                        <div class="company-logo">
+                            <img src="https://bookface-images.s3.amazonaws.com/small_logos/ccbeabe74e35bc254e82e981b4fca69945e24730.png" alt="Ego">
+                        </div>
+                        <div class="timeline-content">
+                            <div class="header">
+                                <h3 class="company">Ego (YC W24) <span class="arrow">›</span></h3>
+                                <span class="date">Nov. 2024 - Present</span>
+                            </div>
+                            <p class="position">Software Engineering Intern</p>
+                            <ul class="responsibilities">
+                                <li>Optimized LLM integration for enhanced user interactions, including game speech patterns and Discord activities, while improving backend efficiency through FastAPI optimizations and researching automated QA testing</li>
+                            </ul>
+                        </div>
+                    </a>
+                </div>
+                <div class="timeline-item">
+                    <a href="https://sce.sjsu.edu/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: flex; gap: 2rem; width: 100%;">
+                        <div class="company-logo">
+                            <img src="https://cdn.freebiesupply.com/logos/large/2x/san-jose-state-spartans-logo-png-transparent.png" alt="Software and Computer Engineering Society">
+                        </div>
+                        <div class="timeline-content">
+                            <div class="header">
+                                <h3 class="company">SJSU College of Engineering <span class="arrow">›</span></h3>
+                                <span class="date">Sept. 2024 - Present</span>
+                            </div>
+                            <p class="position">Software Engineering Intern</p>
+                            <ul class="responsibilities">
+                                <li>Developed a Discord bot with LLM integration using FastAPI and LangChain, enabling members to interact with club services like the fridge inventory system and access school information through natural language queries.</li>
+                            </ul>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="timeline-item">
+                    <a href="https://sce.sjsu.edu/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: flex; gap: 2rem; width: 100%;">
+                        <div class="company-logo">
+                            <img src="https://sce.sjsu.edu/favicon.ico" alt="Software and Computer Engineering Society">
+                        </div>
+                        <div class="timeline-content">
+                            <div class="header">
+                                <h3 class="company">Software and Computer Engineering Society <span class="arrow">›</span></h3>
+                                <span class="date">Sept. 2024 - Present</span>
+                            </div>
+                            <p class="position">Artificial Intelligence & Machine Learning Team Lead</p>
+                            <ul class="responsibilities">
+                                <li>Led weekly workshops and team meetings focused on machine learning projects, guiding members through data analysis, model development, and collaborative coding practices using tools like Google Colab and Git</li>
+                            </ul>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="hackathons">
+            <h2>Hackathons</h2>
+            <div class="timeline-item">
+                <div class="company-logo">
+                    <img src="https://seeklogo.com/images/H/hackdavis-logo-A72F6F30FA-seeklogo.com.png" alt="DavisHack">
+                </div>
+                <div class="timeline-content">
+                    <div class="header">
+                        <h3 class="company">UC Davis: HackDavis 2025</h3>
+                        <span class="date">April 2025</span>
+                    </div>
+                    <p class="position">Davis, California</p>
+                    <ul class="responsibilities">
+                        <li></li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://devpost.com/software/lmk-2tzig6" class="link-button" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-globe"></i> Devpost
+                        </a>
+                        <a href="https://github.com/NicholasLe04/hackforhumanity" class="link-button" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> Source
+                        </a>
+                        <a href="https://lmk-kappa.vercel.app/" class="link-button" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-play"></i> Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    
+                    <div class="company-logo">
+                        <img src="https://media.licdn.com/dms/image/v2/D560BAQFpp-qgfI9M5w/company-logo_200_200/company-logo_200_200/0/1731572246007/sf_hacks_sfsu_logo?e=2147483647&v=beta&t=Ex8J-ZEq2V1b7JF_cD1PxEeeetMV6gBfQ5jGxED2VZs" alt="SFHacks">
+                    </div>
+                    <div class="timeline-content">
+                        <div class="header">
+                            <h3 class="company">San Francisco State University: SFHacks 👑</h3>
+                            <span class="date">April 2025</span>
+                        </div>
+                        <p class="position">San Francisco, California</p>
+                        <ul class="responsibilities">
+                            <li>Won Best BioTech Hack by developing an Agentic document workflows for first-gen immigrants struggling with medical documents. A user uploads a video explaining their situation to power a RAG automation agent to parse and fill documents.
+                            </li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://devpost.com/software/form-force" class="link-button" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-globe"></i> Devpost
+                            </a>
+                            <a href="https://github.com/jask1m/fillosophy" class="link-button" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> Source
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    
+                    <div class="company-logo">
+                        <img src="data:image/jpeg;base64,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" alt="HackHayward2025">
+                    </div>
+                    <div class="timeline-content">
+                        <div class="header">
+                            <h3 class="company">CSU Eastbay: HackHayward 2025 👑</h3>
+                            <span class="date">March 2025</span>
+                        </div>
+                        <p class="position">Hayward, California</p>
+                        <ul class="responsibilities">
+                            <li>Won Best Multimodal Use of Groq for developing an AI-powered Browser Agent that autonomously navigates websites and completes tasks via voice commands, utilizing PyGame for rendering the Browser Assistant 3D Model and Groq for processing the website's DOM.</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://devpost.com/software/ava-zamdu0" class="link-button" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-globe"></i> Devpost
+                            </a>
+                            <a href="https://github.com/n8thantran/HackHayward2025" class="link-button" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> Source
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="company-logo">
+                        <img src="data:image/png;base64,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" alt="HackForHumanity">
+                    </div>
+                    <div class="timeline-content">
+                        <div class="header">
+                            <h3 class="company">Santa Clara University: Hack for Humanity</h3>
+                            <span class="date">Feb. 2025</span>
+                        </div>
+                        <p class="position">Santa Clara, California</p>
+                        <ul class="responsibilities">
+                            <li>lmk is a real-time incident tracking platform that empowers communities to report and monitor local safety concerns through an interactive map interface with AI-powered classification and alert systems. The project combines Next.js, Mapbox, and a sophisticated AI pipeline featuring Classifier, Warning, Summarizer, and Aggregator agents to process incident reports and deliver relevant, actionable safety information to users based on severity and proximity.</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://devpost.com/software/lmk-2tzig6" class="link-button" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-globe"></i> Devpost
+                            </a>
+                            <a href="https://github.com/NicholasLe04/hackforhumanity" class="link-button" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> Source
+                            </a>
+                            <a href="https://lmk-kappa.vercel.app/" class="link-button" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-play"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="company-logo">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNCG77kNk5G0TFPVoLOjCB9bUeDIW86XyPtQ&s" alt="Stanford XR">
+                    </div>
+                    <div class="timeline-content">
+                        <div class="header">
+                            <h3 class="company">Stanford XR Hacks: Immerse the Bay 2024 👑</h3>
+                            <span class="date">November 2024</span>
+                        </div>
+                        <p class="position">Stanford, California</p>
+                        <ul class="responsibilities">
+                            <li>Won Best Use of Amazon AWS and Best Integration of AI prizes for Dreamscapes, a VR sandbox enabling voice-commanded 3D model generation. Created an AI pipeline using FLUX.1-schelle and TripoSR models to convert text to 3D meshes in ~30 seconds, while implementing Redis vector search for asset caching and AWS S3 for model storage and delivery.</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://devpost.com/software/stellar-horizons" class="link-button" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-globe"></i> Devpost
+                            </a>
+                            <a href="https://github.com/banyar-shin/DreamScapes" class="link-button" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> Source
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="company-logo">
+                        <img src="https://avatars.githubusercontent.com/u/7351179?s=280&v=4" alt="Cal Hacks">
+                    </div>
+                    <div class="timeline-content">
+                        <div class="header">
+                            <h3 class="company">CalHacks 2024</h3>
+                            <span class="date">October 2024</span>
+                        </div>
+                        <p class="position">San Francisco, California</p>
+                        <ul class="responsibilities">
+                            <li>Collaborated with Snap Spectacles to develop NutriLens, an AR application that provides nutritional information and recipe suggestions based on photos taken through smart glasses, built using TypeScript and JavaScript while integrating USDA nutrition data, AR technology, and AI-powered image recognition for food identification and macro tracking.</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://devpost.com/software/nutrilens-1u9jo4" class="link-button" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-globe"></i> Devpost
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="education">
+            <h2>Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="company-logo">
+                        <img src="https://cdn.freebiesupply.com/logos/large/2x/san-jose-state-spartans-logo-png-transparent.png" alt="SJSU">
+                    </div>
+                    <div class="timeline-content">
+                        <div class="header">
+                            <h3 class="company">San Jose State University</h3>
+                            <span class="date">2024 - 2026</span>
+                        </div>
+                        <p class="position">B.S. Computer Science</p>
+                        <ul class="responsibilities">
+                            <li>Expected Graduation: Spring 2026</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        Made with <a href="/os" class="heart-link" style="cursor: pointer; display: inline-block;"><i class="fas fa-heart"></i></a>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
