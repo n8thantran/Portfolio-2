@@ -57,16 +57,36 @@ const PortfolioPage = () => {
 
   const hackathons = [
     {
+        logoUrl: "https://d112y698adiu2z.cloudfront.net/photos/production/challenge_photos/000/624/233/datas/original.png",
+        hackathonName: "HackSJSU",
+        title: "San Jose State University: SJHacks 2025",
+        date: "April 2025",
+        location: "San Jose, California",
+        isWinner: false,
+        description: [
+            "San Jose's notorious traffic congestion doesn't just waste time and fuel — it can cost lives when emergency vehicles are delayed. We set out to build a practical, AI-powered system that transforms ordinary intersections into smart, responsive nodes in a citywide network, all without requiring expensive new hardware or disruptive infrastructure changes.",
+        ],
+        links: [
+            { icon: "fas fa-globe", label: "Devpost", url: "https://devpost.com/software/traffico-973wr2" },
+            { icon: "fab fa-github", label: "Source", url: "https://github.com/n8thantran/SJHacks-2025" },
+            { icon: "fas fa-play", label: "Demo", url: "https://traffico-beta.vercel.app/" },
+            {icon: "fas fa-file-pdf", label: "Presentation", url: "https://docs.google.com/presentation/d/1cesmYvw1MQ_Zr_5Ol6HrijHAw-WvadYTsXphrBEbOHc/edit?usp=sharing"},
+            {icon: "fas fa-file-video", label: "Video", url: "https://youtu.be/BgwGHjwiLG8"}
+        ],
+    },
+    {
       logoUrl: "https://seeklogo.com/images/H/hackdavis-logo-A72F6F30FA-seeklogo.com.png",
       hackathonName: "HackDavis",
       title: "UC Davis: HackDavis 2025",
       date: "April 2025",
       location: "Davis, California",
-      description: [],
+      description: [
+        "MedLM is an equality-focused healthcare platform that eliminates racial bias through anonymized consultations, ensuring equal medication recommendations and care options while tracking health data to identify and correct treatment disparities.",
+      ],
       links: [
-        { icon: "fas fa-globe", label: "Devpost", url: "https://devpost.com/software/lmk-2tzig6" },
-        { icon: "fab fa-github", label: "Source", url: "https://github.com/NicholasLe04/hackforhumanity" },
-        { icon: "fas fa-play", label: "Demo", url: "https://lmk-kappa.vercel.app/" },
+        { icon: "fas fa-globe", label: "Devpost", url: "https://devpost.com/software/medlm" },
+        { icon: "fab fa-github", label: "Source", url: "https://github.com/steeevin88/medLM" },
+        { icon: "fas fa-play", label: "Research Paper", url: "https://docs.google.com/document/d/1WoZ7AjkMtlMs9ROhX4OyMAbJyHaAGq2D_okqHV4xULY/edit?tab=t.0#heading" },
       ],
     },
     {
@@ -77,12 +97,72 @@ const PortfolioPage = () => {
       location: "San Francisco, California",
       isWinner: true,
       description: [
-        "Won Best BioTech Hack by developing an Agentic document workflows for first-gen immigrants struggling with medical documents. A user uploads a video explaining their situation to power a RAG automation agent to parse and fill documents.",
+        "Won Best BioTech Hack and People of Color Empowerment awards by developing an Agentic document workflows for first-gen immigrants struggling with medical documents. A user uploads a video explaining their situation to power a RAG automation agent to parse and fill documents.",
       ],
       links: [
         { icon: "fas fa-globe", label: "Devpost", url: "https://devpost.com/software/form-force" },
         { icon: "fab fa-github", label: "Source", url: "https://github.com/jask1m/fillosophy" },
       ],
+    },
+    {
+        logoUrl: "https://d112y698adiu2z.cloudfront.net/photos/production/challenge_thumbnails/003/297/661/datas/original.jpeg",
+        hackathonName: "Hack Hayward",
+        title: "CSU Eastbay: HackHayward 2025",
+        date: "February 2025",
+        location: "Hayward, California",
+        isWinner: true,
+        description: [
+            "Won Best Multimodal Use of Groq for developing an AI-powered Browser Agent that autonomously navigates websites and completes tasks via voice commands, utilizing PyGame for rendering the Browser Assistant 3D Model and Groq for processing the website's DOM.",
+        ],
+        links: [
+            { icon: "fas fa-globe", label: "Devpost", url: "https://devpost.com/software/ava-zamdu0" },
+            { icon: "fab fa-github", label: "Source", url: "https://github.com/n8thantran/HackHayward2025" },
+        ],
+    },
+    {
+        logoUrl: "https://d112y698adiu2z.cloudfront.net/photos/production/challenge_thumbnails/001/816/098/datas/original.png",
+        hackathonName: "Hack for Humanity",
+        title: "Santa Clara University: Hack for Humanity",
+        date: "February 2025",
+        location: "Santa Clara, California",
+        isWinner: false,
+        description: [
+            "lmk is a real-time incident tracking platform that empowers communities to report and monitor local safety concerns through an interactive map interface with AI-powered classification and alert systems. The project combines Next.js, Mapbox, and a sophisticated AI pipeline featuring Classifier, Warning, Summarizer, and Aggregator agents to process incident reports and deliver relevant, actionable safety information to users based on severity and proximity.",
+        ],
+        links: [
+            { icon: "fas fa-globe", label: "Devpost", url: "https://devpost.com/software/lmk-2tzig6" },
+            { icon: "fab fa-github", label: "Source", url: "https://github.com/NicholasLe04/hackforhumanity" },
+            { icon: "fas fa-play", label: "Demo", url: "https://lmk-kappa.vercel.app/" },
+        ],
+    },
+    {
+        logoUrl: "https://d112y698adiu2z.cloudfront.net/photos/production/challenge_thumbnails/002/663/411/datas/large.png",
+        hackathonName: "Immerse the Bay",
+        title: "Stanford XR Hacks: Immerse the Bay 2024",
+        date: "November 2024",
+        location: "Stanford, California",
+        isWinner: true,
+        description: [
+            "Won Best Use of Amazon AWS, Best Integration of AI prizes, and Runner Up for Meta for Dreamscapes, a VR sandbox enabling voice-commanded 3D model generation. Created an AI pipeline using FLUX.1-schelle and TripoSR models to convert text to 3D meshes in ~30 seconds, while implementing Redis vector search for asset caching and AWS S3 for model storage and delivery.",
+        ],
+        links: [
+            { icon: "fas fa-globe", label: "Devpost", url: "https://devpost.com/software/stellar-horizons" },
+            { icon: "fab fa-github", label: "Source", url: "https://github.com/banyar-shin/DreamScapes" },
+        ],
+    },
+    {
+        logoUrl: "https://d112y698adiu2z.cloudfront.net/photos/production/challenge_thumbnails/003/083/836/datas/original.png",
+        hackathonName: "CalHacks 11.0",
+        title: "UC Berkeley: CalHacks 11.0",
+        date: "October 2024",
+        location: "San Francisco, California",
+        isWinner: false,
+        description: [
+            "Collaborated with Snap Spectacles to develop NutriLens, an AR application that provides nutritional information and recipe suggestions based on photos taken through smart glasses, built using TypeScript and JavaScript while integrating USDA nutrition data, AR technology, and AI-powered image recognition for food identification and macro tracking.",
+        ],
+        links: [
+            { icon: "fas fa-globe", label: "Devpost", url: "https://devpost.com/software/nutrilens-1u9jo4" }
+        ],
     },
   ];
 
