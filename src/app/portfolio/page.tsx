@@ -13,7 +13,7 @@ const PortfolioPage = () => {
       logoUrl: "https://static-00.iconduck.com/assets.00/uber-icon-2048x2048-1c9pt96a.png",
       companyName: "Uber",
       link: "https://www.uber.com/us/en/careers/careerprep/",
-      title: "Uber Career Prep",
+      title: "Uber",
       date: "Dec. 2024 - Present",
       position: "Software Engineering Fellow",
       responsibilities: [
