@@ -5,6 +5,7 @@ import ExperienceItem from "./components/ExperienceItem";
 import HackathonItem from "./components/HackathonItem";
 import Head from "next/head";
 import { PortfolioDock } from "./components/PortfolioDock";
+import { Skills } from "./components/Skills";
 
 const PortfolioPage = () => {
   const experiences = [
@@ -183,7 +184,6 @@ const PortfolioPage = () => {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossOrigin="anonymous" referrerPolicy="no-referrer" />
       </Head>
       <PortfolioDock />
-      
       <main className="container mx-auto px-6 py-24 max-w-4xl">
 
         <section id="experience" className="mb-16">
@@ -228,6 +228,10 @@ const PortfolioPage = () => {
               </div>
             </div>
           </div>
+        </section>
+
+        <section id="skills" className="mb-16">
+          <Skills />
         </section>
       </main>
     </div>
