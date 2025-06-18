@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useTheme } from "./theme-provider";
+import { IconProps } from "@/app/portfolio/components/PortfolioDock";
 
 export function ThemeToggle() {
   const { theme, toggleTheme, mounted } = useTheme();
@@ -10,22 +11,31 @@ export function ThemeToggle() {
     toggleTheme();
   };
 
-  // Don't render until mounted to avoid hydration mismatch
   if (!mounted) {
     return (
-      <div className="fixed top-6 right-6 p-3 rounded-full border border-gray-300 bg-white w-[44px] h-[44px]" />
+      <div className="w-6 h-6" />
     );
   }
 
   return (
     <button
       onClick={handleClick}
-      className="fixed top-6 right-6 p-3 rounded-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-black hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors duration-200 z-50"
       aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+      className="flex items-center justify-center"
     >
       {theme === "light" ? (
+        <Icons.sun className="size-6" />
+      ) : (
+        <Icons.moon className="size-6" />
+      )}
+    </button>
+  );
+}
+
+const Icons = {
+    sun: (props: IconProps) => (
         <svg
-          className="w-5 h-5 text-gray-800"
+          {...props}
           fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
@@ -36,16 +46,15 @@ export function ThemeToggle() {
             clipRule="evenodd"
           />
         </svg>
-      ) : (
+    ),
+    moon: (props: IconProps) => (
         <svg
-          className="w-5 h-5 text-gray-200"
+          {...props}
           fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
         </svg>
-      )}
-    </button>
-  );
+    )
 } 

@@ -1,11 +1,10 @@
 "use client";
 
 import React from "react";
-import { ThemeToggle } from "../components/theme-toggle";
-import Link from "next/link";
 import ExperienceItem from "./components/ExperienceItem";
 import HackathonItem from "./components/HackathonItem";
 import Head from "next/head";
+import { PortfolioDock } from "./components/PortfolioDock";
 
 const PortfolioPage = () => {
   const experiences = [
@@ -183,12 +182,7 @@ const PortfolioPage = () => {
         <title>Nathan Tran - Portfolio</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossOrigin="anonymous" referrerPolicy="no-referrer" />
       </Head>
-      <ThemeToggle />
-      <nav className="fixed top-6 left-6 z-50">
-        <Link href="/" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
-          &larr; Back to Home
-        </Link>
-      </nav>
+      <PortfolioDock />
       
       <main className="container mx-auto px-6 py-24 max-w-4xl">
 
@@ -235,12 +229,6 @@ const PortfolioPage = () => {
             </div>
           </div>
         </section>
-
-        <section id="tech-stack" className="mb-16">
-          <h2 className="text-3xl font-light mb-6 border-b border-gray-200 dark:border-gray-700 pb-2">Tech Stack</h2>
-          <p className="text-gray-700 dark:text-gray-300">Placeholder for Tech Stack details.</p>
-        </section>
-
       </main>
     </div>
   );
