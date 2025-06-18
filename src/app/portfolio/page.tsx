@@ -218,7 +218,7 @@ const PortfolioPage = () => {
               <div>
                 <h3 className="text-xl font-light">San Jose State University</h3>
                 <p className="text-gray-700 dark:text-gray-300">Bachelor of Science in Computer Science</p>
-                <p className="text-gray-600 dark:text-gray-400">Expected Graduation: May 2025</p>
+                <p className="text-gray-600 dark:text-gray-400">Expected Graduation: May 2027</p>
                 <div className="mt-4">
                   <h4 className="text-lg font-light mb-2">Organizations & Activities</h4>
                   <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
