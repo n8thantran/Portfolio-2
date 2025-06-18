@@ -6,6 +6,7 @@ import HackathonItem from "./components/HackathonItem";
 import Head from "next/head";
 import { PortfolioDock } from "./components/PortfolioDock";
 import { TechStack } from "./components/TechStack";
+import { Analytics } from "@vercel/analytics/next"
 
 const PortfolioPage = () => {
   const experiences = [
@@ -234,6 +235,7 @@ const PortfolioPage = () => {
           <TechStack />
         </section>
       </main>
+      <Analytics />
     </div>
   );
 };
