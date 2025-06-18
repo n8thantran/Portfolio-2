@@ -5,7 +5,7 @@ import ExperienceItem from "./components/ExperienceItem";
 import HackathonItem from "./components/HackathonItem";
 import Head from "next/head";
 import { PortfolioDock } from "./components/PortfolioDock";
-import { Skills } from "./components/Skills";
+import { TechStack } from "./components/TechStack";
 
 const PortfolioPage = () => {
   const experiences = [
@@ -231,7 +231,7 @@ const PortfolioPage = () => {
         </section>
 
         <section id="skills" className="mb-16">
-          <Skills />
+          <TechStack />
         </section>
       </main>
     </div>
