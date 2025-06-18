@@ -10,6 +10,17 @@ import Head from "next/head";
 const PortfolioPage = () => {
   const experiences = [
     {
+        logoUrl: "https://tr.rbxcdn.com/180DAY-3c76f389517893346e3395278a6aabe1/150/150/Image/Webp/noFilter",
+        companyName: "BloxShield",
+        link: "https://bloxshield.org/",
+        title: "BloxShield",
+        date: "June 2025 - Present",
+        position: "Software Engineering Intern",
+        responsibilities: [
+            "Developed internal investigation tooling using FastAPI and LangChain that automated content analysis and threat detection, resulting in a 25-30% improvement in investigation process efficiency"
+        ],
+    },
+    {
       logoUrl: "https://static-00.iconduck.com/assets.00/uber-icon-2048x2048-1c9pt96a.png",
       companyName: "Uber",
       link: "https://www.uber.com/us/en/careers/careerprep/",
@@ -180,10 +191,6 @@ const PortfolioPage = () => {
       </nav>
       
       <main className="container mx-auto px-6 py-24 max-w-4xl">
-        <header className="text-center mb-16">
-          <h1 className="text-5xl md:text-7xl font-light tracking-tight mb-4">Portfolio</h1>
-          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 font-light">A collection of my work and experiences.</p>
-        </header>
 
         <section id="experience" className="mb-16">
           <h2 className="text-3xl font-light mb-8 border-b border-gray-200 dark:border-gray-700 pb-2">Work Experience</h2>
@@ -204,8 +211,29 @@ const PortfolioPage = () => {
         </section>
 
         <section id="education" className="mb-16">
-          <h2 className="text-3xl font-light mb-6 border-b border-gray-200 dark:border-gray-700 pb-2">Education</h2>
-          <p className="text-gray-700 dark:text-gray-300">Placeholder for Education details.</p>
+          <h2 className="text-3xl font-light mb-8 border-b border-gray-200 dark:border-gray-700 pb-2">Education</h2>
+          <div className="space-y-8">
+            <div className="flex items-start gap-6">
+              <div className="w-16 h-16 flex-shrink-0">
+                <img 
+                  src="https://community.cob.sjsu.edu/wp-content/uploads/2018/09/cropped-SJSU-Spartan-Logo.png" 
+                  alt="SJSU Logo" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div>
+                <h3 className="text-xl font-light">San Jose State University</h3>
+                <p className="text-gray-700 dark:text-gray-300">Bachelor of Science in Computer Science</p>
+                <p className="text-gray-600 dark:text-gray-400">Expected Graduation: May 2025</p>
+                <div className="mt-4">
+                  <h4 className="text-lg font-light mb-2">Organizations & Activities</h4>
+                  <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
+                    <li>Software and Computer Engineering Society, Responsible Computing Club, Association for Computing Machinery (ACM)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
         <section id="tech-stack" className="mb-16">
@@ -213,10 +241,6 @@ const PortfolioPage = () => {
           <p className="text-gray-700 dark:text-gray-300">Placeholder for Tech Stack details.</p>
         </section>
 
-        <section id="projects" className="mb-16">
-          <h2 className="text-3xl font-light mb-6 border-b border-gray-200 dark:border-gray-700 pb-2">Projects</h2>
-          <p className="text-gray-700 dark:text-gray-300">Placeholder for Projects details.</p>
-        </section>
       </main>
     </div>
   );
