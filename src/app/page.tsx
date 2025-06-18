@@ -17,7 +17,7 @@ export default function Home() {
           
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-8 font-light leading-relaxed">
             Computer Science @ SJSU
-          </p>s
+          </p>
           
           <Link href="/portfolio">
             <button className="group relative px-8 py-3 border border-black dark:border-white text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300 font-light tracking-wide">
