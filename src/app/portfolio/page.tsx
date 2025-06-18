@@ -37,7 +37,7 @@ const PortfolioPage = () => {
       companyName: "Ego",
       link: "https://ego.live",
       title: "Ego (YC W24)",
-      date: "Nov. 2024 - Present",
+      date: "Nov. 2024 - March 2025",
       position: "Software Engineering Intern",
       responsibilities: [
         "Optimized LLM integration for enhanced user interactions, including game speech patterns and Discord activities, while improving backend efficiency through FastAPI optimizations and researching automated QA testing",
