@@ -18,13 +18,21 @@ export default function Home() {
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-8 font-light leading-relaxed">
             Computer Science @ SJSU
           </p>
-          
-          <Link href="/portfolio">
-            <button className="group relative px-8 py-3 border border-black dark:border-white text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300 font-light tracking-wide">
-              <span className="relative z-10">View Portfolio</span>
-              <div className="absolute inset-0 bg-black dark:bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-            </button>
-          </Link>
+
+          <div className="flex flex-col items-center space-y-4">
+            <Link href="/portfolio">
+              <button className="group relative px-8 py-3 border border-black dark:border-white text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300 font-light tracking-wide w-48 text-center">
+                <span className="relative z-10">View Portfolio</span>
+                <div className="absolute inset-0 bg-black dark:bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+              </button>
+            </Link>
+            <Link href="/parking">
+              <button className="group relative px-8 py-3 border border-black dark:border-white text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300 font-light tracking-wide w-48 text-center">
+                <span className="relative z-10">Parking</span>
+                <div className="absolute inset-0 bg-black dark:bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+              </button>
+            </Link>
+          </div>
         </div>
       </main>
       <Analytics />
