@@ -32,6 +32,12 @@ export default function Home() {
                 <div className="absolute inset-0 bg-black dark:bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
               </button>
             </Link>
+            <Link href="/srac">
+              <button className="group relative px-8 py-3 border border-black dark:border-white text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300 font-light tracking-wide w-48 text-center">
+                <span className="relative z-10">SRAC</span>
+                <div className="absolute inset-0 bg-black dark:bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+              </button>
+            </Link>
           </div>
         </div>
       </main>

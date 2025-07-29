@@ -69,6 +69,48 @@ const PortfolioPage = () => {
 
   const hackathons = [
     {
+      logoUrl: "https://i.pinimg.com/564x/41/73/6f/41736f27da5ce3b65fe481f8f0410a3a.jpg",
+      hackathonName: "NVIDIA World's Shortest Hackathon",
+      title: "NVIDIA World's Shortest Hackathon",
+      date: "July 2025",
+      location: "San Francisco, California",
+      isWinner: true,
+      description: [
+        "Top 5 Finalists for developing Juri, an AI-powered legal assistant application for founders and entrepreneurs, featuring natural language legal Q&A, document processing, and automated legal document generation using NVIDIA's Nemotron model.",
+      ],
+      links: [
+        { icon: "fab fa-github", label: "Source", url: "https://github.com/n8thantran/nvidia-agenthack-2025" },
+      ],
+    },
+    {
+      logoUrl: "https://play-lh.googleusercontent.com/HqpEhzMm2vt_D1JqdOtWPh_Q9ZLTqMr936Hsu8asadFTKzXD9YW8hP69uTVdDXzN9n4",
+      hackathonName: "Mentra Live Hackathon",
+      title: "Mentra Live Hackathon",
+      date: "July 2025",
+      location: "San Francisco, California",
+      isWinner: false,
+      description: [
+        "Built a smart glasses app to take pictures of food and get nutritional information using Claude and the MentraOS SDK.",
+      ],
+      links: [
+        { icon: "fab fa-github", label: "Source", url: "https://github.com/n8thantran/mentra-nutrilens" },
+      ],
+    },
+    {
+      logoUrl: "https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,background=white,quality=75,width=300,height=300/event-covers/cn/d16bbb1c-f1f1-4657-b685-53865ee5d17e.jpg",
+      hackathonName: "Humane Tech Hackathon",
+      title: "Humane Tech Hackathon",
+      date: "June 2025",
+      location: "San Francisco, California",
+      isWinner: true,
+      description: [
+        "Won First Grand Prize for developing a platform for live call transcription using VAPI webhooks with real-time audio processing, transcript management, and modern dashboard visualization.",
+      ],
+      links: [
+        { icon: "fab fa-github", label: "Source", url: "https://github.com/n8thantran/humane-tech-hackathon" },
+      ],
+    },
+    {
         logoUrl: "https://d112y698adiu2z.cloudfront.net/photos/production/challenge_photos/000/624/233/datas/original.png",
         hackathonName: "HackSJSU",
         title: "San Jose State University: SJHacks 2025",
