@@ -28,13 +28,22 @@ const ParkingCard = ({
   total: number;
 }) => {
   const openSpots = open ?? 0;
-  const percentage = total > 0 ? (openSpots / total) * 100 : 0;
+  const occupiedSpots = total - openSpots;
+  const occupancyPercentage = total > 0 ? (occupiedSpots / total) * 100 : 0;
   const address = GARAGE_ADDRESSES[name];
 
   const getBarColor = () => {
-    if (percentage > 50) return "bg-green-500";
-    if (percentage > 20) return "bg-yellow-500";
-    return "bg-red-500";
+    if (occupancyPercentage > 80) return "bg-red-500";
+    if (occupancyPercentage > 60) return "bg-yellow-500";
+    return "bg-green-500";
+  };
+
+  const getOccupancyStatus = () => {
+    if (occupancyPercentage > 90) return "Nearly Full";
+    if (occupancyPercentage > 80) return "Very Full";
+    if (occupancyPercentage > 60) return "Moderately Full";
+    if (occupancyPercentage > 30) return "Available";
+    return "Plenty of Space";
   };
 
   const handleOpenMaps = () => {
@@ -57,16 +66,21 @@ const ParkingCard = ({
         <h3 className="text-2xl font-light tracking-tight">{name}</h3>
         {open !== null ? (
           <>
-            <p className="text-4xl font-bold my-2 text-green-600 dark:text-green-400">
-              {open}
-              <span className="text-lg font-light text-gray-500 dark:text-gray-400">
-                / {total} spots available
-              </span>
-            </p>
+            <div className="my-4">
+              <p className="text-4xl font-bold text-gray-900 dark:text-gray-100">
+                {Math.round(occupancyPercentage)}%
+                <span className="text-lg font-light text-gray-500 dark:text-gray-400 ml-2">
+                  occupied
+                </span>
+              </p>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                {openSpots} of {total} spots available • {getOccupancyStatus()}
+              </p>
+            </div>
             <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 my-4">
               <div
-                className={`h-2.5 rounded-full ${getBarColor()}`}
-                style={{ width: `${percentage}%` }}
+                className={`h-2.5 rounded-full transition-all duration-300 ${getBarColor()}`}
+                style={{ width: `${occupancyPercentage}%` }}
               ></div>
             </div>
           </>
@@ -131,7 +145,7 @@ export default function ParkingPage() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg text-gray-600 dark:text-gray-400 mb-12 font-light"
           >
-            Live availability for campus parking garages.
+            Real-time occupancy levels and availability for campus parking garages.
           </motion.p>
           
           {loading ? (
