@@ -27,18 +27,21 @@ const ParkingCard = ({
   open: number | null;
   total: number;
 }) => {
-  const openSpots = open ?? 0;
+  // Handle the case where open is null (data not available) vs 0 (full)
+  const openSpots = open !== null ? open : 0;
   const occupiedSpots = total - openSpots;
   const occupancyPercentage = total > 0 ? (occupiedSpots / total) * 100 : 0;
   const address = GARAGE_ADDRESSES[name];
 
   const getBarColor = () => {
+    if (occupancyPercentage >= 100) return "bg-red-600";
     if (occupancyPercentage > 80) return "bg-red-500";
     if (occupancyPercentage > 60) return "bg-yellow-500";
     return "bg-green-500";
   };
 
   const getOccupancyStatus = () => {
+    if (occupancyPercentage >= 100) return "Full";
     if (occupancyPercentage > 90) return "Nearly Full";
     if (occupancyPercentage > 80) return "Very Full";
     if (occupancyPercentage > 60) return "Moderately Full";
@@ -80,14 +83,24 @@ const ParkingCard = ({
             <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 my-4">
               <div
                 className={`h-2.5 rounded-full transition-all duration-300 ${getBarColor()}`}
-                style={{ width: `${occupancyPercentage}%` }}
+                style={{ width: `${Math.min(occupancyPercentage, 100)}%` }}
               ></div>
             </div>
           </>
         ) : (
-          <p className="text-lg text-gray-500 dark:text-gray-400 my-4">
-            Data not available
-          </p>
+          <>
+            <div className="my-4">
+              <p className="text-2xl text-gray-500 dark:text-gray-400">
+                Data not available
+              </p>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                Unable to retrieve current occupancy data
+              </p>
+            </div>
+            <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 my-4">
+              <div className="h-2.5 rounded-full bg-gray-400 animate-pulse"></div>
+            </div>
+          </>
         )}
       </div>
 

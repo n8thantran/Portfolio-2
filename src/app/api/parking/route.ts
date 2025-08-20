@@ -35,7 +35,12 @@ async function getParkingData() {
         const nextP = $(el).next("p.garage__text");
         if (nextP.length > 0) {
           const fullnessSpan = nextP.find("span.garage__fullness");
-          if (fullnessSpan.length > 0) {
+          const textContent = nextP.text().trim().toLowerCase();
+          
+          // Check if the garage is marked as "full"
+          if (textContent.includes("full")) {
+            data[garageName].open = 0;
+          } else if (fullnessSpan.length > 0) {
             const percentageText = fullnessSpan.text().trim().replace("%", "").trim();
             const percentageFull = parseInt(percentageText, 10);
 
