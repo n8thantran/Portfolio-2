@@ -22,9 +22,9 @@ const PortfolioPage = () => {
         ],
     },
     {
-      logoUrl: "https://static-00.iconduck.com/assets.00/uber-icon-2048x2048-1c9pt96a.png",
+      logoUrl: "https://cdn.mos.cms.futurecdn.net/tQxVwcJSowYD7xwWDYidd9.jpg",
       companyName: "Uber",
-      link: "https://www.uber.com/us/en/careers/careerprep/",
+      link: "https://uber.com",
       title: "Uber",
       date: "Dec. 2024 - Present",
       position: "Software Engineering Fellow",
@@ -68,6 +68,20 @@ const PortfolioPage = () => {
   ];
 
   const hackathons = [
+    {
+      logoUrl: "https://d112y698adiu2z.cloudfront.net/photos/production/challenge_thumbnails/003/683/553/datas/large.png",
+      hackathonName: "Agent Foundry",
+      title: "Agent Foundry",
+      date: "August 2025",
+      location: "San Francisco, California",
+      isWinner: true,
+      description: [
+        "Won 3rd place for developing OpsPilot, a zero-configuration DevOps platform that automatically discovers repositories, configures deployment pipelines, and provides live infrastructure intelligence using AWS and Terraform."
+      ],
+      links: [
+        { icon: "fab fa-github", label: "Source", url: "https://github.com/n8thantran/afore-ai-agents-hackathon" },
+      ],
+    },
     {
       logoUrl: "https://i.pinimg.com/564x/41/73/6f/41736f27da5ce3b65fe481f8f0410a3a.jpg",
       hackathonName: "NVIDIA World's Shortest Hackathon",
